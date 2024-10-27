@@ -1,0 +1,89 @@
+﻿@model ProductResponse
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Listesi</title>
+    <link rel="stylesheet" href="~/css/styles.css"> <!-- CSS dosyası için bağlantı -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .product-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 600px;
+            margin-bottom: 20px; /* Ürünler arası boşluk */
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-title {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            color: #d9534f; /* Kırmızı renk */
+            font-size: 20px;
+        }
+
+        .product-description {
+            margin: 15px 0;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ürün Listesi</h1>
+
+    @foreach (var product in Model.Products)
+    {
+        <div class="product-container">
+            <img src="@product.Thumbnail" alt="@product.Title" class="product-image"> <!-- Ürün Resmi -->
+
+            <h2 class="product-title">@product.Title</h2> <!-- Ürün Başlığı -->
+
+            <p class="product-price">Fiyat: @product.Price TL</p> <!-- Ürün Fiyatı -->
+
+            <p class="product-description">@product.Description</p> <!-- Ürün Açıklaması -->
+
+            <div class="tags">
+                <h4>Etiketler:</h4>
+                @foreach (var tag in product.Tags)
+                {
+                    <span class="tag">@tag</span> <!-- Ürün Etiketleri -->
+                }
+            </div>
+
+            <p><strong>Rating:</strong> @product.Rating</p> <!-- Ürün Değerlendirmesi -->
+            <p><strong>Stok Durumu:</strong> @product.Stock adet</p> <!-- Stok Durumu -->
+            <p><strong>İndirim Oranı:</strong> @product.DiscountPercentage%</p> <!-- İndirim Oranı -->
+            <p><strong>Ağırlık:</strong> @product.Weight kg</p> <!-- Ürün Ağırlığı -->
+        </div>
+    }
+
+</body>
+</html>

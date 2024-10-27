@@ -10,10 +10,7 @@ namespace Crewin.Case.Context
 
         }
 
-        public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Dimensions> Dimensions { get; set; }
-        public DbSet<Review> Reviews { get; set; }
-        public DbSet<Meta> Metas { get; set; }
+    
     }
 }

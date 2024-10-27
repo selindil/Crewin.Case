@@ -12,10 +12,10 @@ namespace Crewin.Case.Controllers
             _productService = productService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(string? name)
         {
-            var q = _productService.GetProductAsync();
-            return View();
+            var products = await _productService.GetProductAsync(name);
+            return View(products);
         }
     }
 }

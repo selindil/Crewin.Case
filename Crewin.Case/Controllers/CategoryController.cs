@@ -14,7 +14,18 @@ namespace Crewin.Case.Controllers
 
         public async Task<IActionResult> Index()
         {
-            await _categoryService.GetCategoriesAsync();
+            var categories = await _categoryService.GetList();
+            //await _categoryService.GetCategoriesAsync();
+            return View(categories);
+        }
+
+        /// <summary>
+        /// apiden categoryleri ceker. database yazar :   url https://localhost:7154/category/CreateCategory 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IActionResult> CreateCategory()
+        {
+             await _categoryService.GetCategoriesAsync();
             return View();
         }
     }

@@ -16,6 +16,8 @@ namespace Crewin.Case.Services
             _categoryRepository = categoryRepository;
             _httpClient = httpClient;
             _configuration = configuration;
+            _httpClient.BaseAddress = new Uri(configuration["ApiCategory"]);
+
         }
 
         public async Task<bool> Create(Category category)
@@ -39,8 +41,7 @@ namespace Crewin.Case.Services
 
         public async Task GetCategoriesAsync()
         {
-            var config = _configuration.GetValue<string>("ApiCategory");
-            var response = await _httpClient.GetAsync(config);
+            var response = await _httpClient.GetAsync("");
 
             if (response.IsSuccessStatusCode)
             {

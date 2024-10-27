@@ -1,0 +1,50 @@
+﻿@using Crewin.Case.Entities
+@model List<Category>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Listesi</title>
+    <link rel="stylesheet" href="~/css/styles.css"> <!-- CSS dosyası için bağlantı -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .category-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px; /* Kategoriler arası boşluk */
+        }
+
+        .category-name {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .category-link {
+            text-decoration: none;
+            color: #007bff; /* Mavi renk */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Kategori Listesi</h1>
+
+    @foreach (var category in Model)
+    {
+        <div class="category-container">
+            <h2 class="category-name">
+                <a class="category-link" href="@Url.Action("Index", "Product", new { name = category.name })">@category.name</a> <!-- Kategori Adı ve Bağlantı -->
+            </h2>
+            <p>Slug: @category.slug</p> <!-- Kategori Slug'ı -->
+        </div>
+    }
+
+</body>
+</html>
