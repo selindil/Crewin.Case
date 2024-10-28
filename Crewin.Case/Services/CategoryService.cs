@@ -54,7 +54,7 @@ namespace Crewin.Case.Services
                 }
                 await _categoryRepository.SaveChangesAsync();
 
-            }
+            } //public async Task GetCategoriesAsync(): API'den tüm kategorileri çeker. Başarılı bir yanıt alındığında, JSON verisi Category nesnelerine dönüştürülür ve repository'e eklenir.
 ;
         }
 
@@ -66,3 +66,4 @@ namespace Crewin.Case.Services
         }
     }
 }
+//CategoryService sınıfı, kategori ile ilgili CRUD (Create, Read, Update, Delete) işlemlerini gerçekleştiren bir servis sağlar. HTTP istekleri yaparak dış bir API ile etkileşim kurar ve verileri bir repository aracılığıyla saklar. Bu yapı, uygulamanın modüler ve test edilebilir olmasını sağlar.

@@ -30,3 +30,7 @@ namespace Crewin.Case.Controllers
         }
     }
 }
+//CategoryController sınıfı, Category (kategori) nesneleriyle ilgili işlemleri kontrol eder.
+//Index metodu, kategoriler listesini almak ve bunu kullanıcıya göstermek için yazılmıştır.
+//CreateCategory metodu ise kategorileri bir API'den çeker ve veritabanına yazar. Bu metodun bir URL açıklaması var, böylece https://localhost:7154/category/CreateCategory adresine yapılan istekler bu metot tarafından işlenir.
+// Kısaca bu kodlar, Category nesneleri üzerinde veri listeleme ve veritabanına kaydetme işlemlerini, kullanıcı isteklerine göre yönetir.

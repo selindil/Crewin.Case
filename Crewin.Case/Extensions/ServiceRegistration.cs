@@ -21,3 +21,10 @@ namespace Crewin.Case.Extensions
         }
     }
 }
+//Bu kodlar, uygulamanın veritabanı bağlantısını, repository yapısını ve belirli servisleri bağımlılık enjeksiyonu aracılığıyla yapılandırıyor. Veritabanı bağlantısı SQL Server ile sağlanıyor, HTTP istemciler tanımlanıyor, ve her istek için gerekli bağımlılıklar hizmet olarak sağlanıyor.
+
+
+
+
+
+

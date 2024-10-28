@@ -45,5 +45,5 @@ namespace Crewin.Case.Services
             }
 
         }
-    }
+    }//ProductService sınıfı, ürün bilgilerini almak için bir servis sağlar. Bu sınıf, API ile etkileşim kurarak ürün verilerini çeker ve ProductResponse nesnesi olarak döner. Kullanıcı, ürün adını vererek bu veriye ulaşabilir. Sınıf, modüler bir yapıya sahip olup, bağımlılıkları üzerinden yönetilir. Ayrıca, JSON verilerini işlemek için Newtonsoft.Json kütüphanesini kullanır.
 }

@@ -12,7 +12,7 @@ namespace Crewin.Case.Controllers
         {
             _logger = logger;
         }
-
+        // ILogger, ASP.NET Core uygulamalarında loglama işlemlerini yönetmek için kullanılır. Bu kod sayesinde, HomeController içinde loglama yapılabilir; örneğin, hata oluştuğunda log kayıtlarına bilgi gönderilebilir.
         public IActionResult Index()
         {
             return View();
@@ -28,5 +28,6 @@ namespace Crewin.Case.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        //Bu satır, hata sayfasına RequestId içeren bir ErrorViewModel nesnesi gönderir. RequestId, hatanın izlenmesine yardımcı olmak için kullanılan bir kimlik numarasıdır. 
     }
 }

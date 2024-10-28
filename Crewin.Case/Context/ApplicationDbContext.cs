@@ -14,3 +14,4 @@ namespace Crewin.Case.Context
     
     }
 }
+// Bu kod, ApplicationDbContext sınıfını tanımlayarak Category varlığını veritabanında bir tabloya bağlar ve bu tablo üzerinde işlem yapabilmemizi sağlar.

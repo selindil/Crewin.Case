@@ -13,3 +13,4 @@ namespace Crewin.Case.Entities
         }
     }
 }
+//BaseEntity, tüm varlık sınıfları için ortak olan Id ve CreatedAt özelliklerini içeren bir temel sınıftır.

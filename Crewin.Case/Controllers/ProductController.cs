@@ -11,7 +11,7 @@ namespace Crewin.Case.Controllers
         {
             _productService = productService;
         }
-
+        //IProductService, ProductController sınıfına bağımlılık olarak enjekte edilmiştir, böylece servis içerisindeki GetProductAsync metodunu kullanarak ürünleri veritabanından veya bir API'den alabilir.
         public async Task<IActionResult> Index(string? name)
         {
             var products = await _productService.GetProductAsync(name);
@@ -19,3 +19,4 @@ namespace Crewin.Case.Controllers
         }
     }
 }
+//Bu sayfadaki kodlar, ProductController içinde ürünleri listelemek ve isteğe bağlı olarak ürün adına göre arama yapmak için gerekli işlemleri tanımlar ve Index görünümünde bu ürünlerin kullanıcıya sunulmasını sağlar.
